@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .up-nav-bar{
+            height: 100px; 
+            outline: 1px solid #000; 
+            padding: 0;
+
+            display: grid;
+            grid-template-columns: 200px auto 100px;
+        }
+
+        .logo-nav-bar{
+            width: 200px; 
+            height:100px; 
+            margin-top: 0px; 
+            float: left; 
+            outline: 1px solid #000;
+        }
+
+        .middle-nav-bar{
+            margin-top: 0px; 
+            float: left; 
+            outline: 1px solid #000;
+        }
+
+        .menu-nav-bar{
+            outline: 1px solid #000; 
+            float: right; 
+            margin-right: 0px; 
+            height: 100px; 
+            width: 100px;
+        }
+
+        .menu{
+            outline: 1px solid #000;
+        }
+
+        .user-form{
+            background-color: whitesmoke;
+            outline: 1px solid #000;  
+        }
+
+        .form-content{
+            margin-left: 10px; margin-top: 10px;
+            padding-top: 10px;
+        }
+
+        .right-bar{
+            float: right ; 
+            display: grid;
+            outline: 1px solid #000;
+            grid-template-rows: 200px auto;
+            width: 400px; height:200px;
+        }
+
+        .main-bar{
+            height: 900px; 
+            outline: 1px solid #000; 
+            display: grid;
+            grid-template-columns: 200px auto 400px;
+        }
+
+        .right-main-bar{
+            display: grid;
+            grid-template-rows: 300px auto;
+        }
+
+        .center-main-bar{
+            display: grid;
+            grid-template-rows: 2fr 1fr;
+        }
+
+        .content-main-bar{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .no-image{
+            float: left;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="up-nav-bar">
+
+        <div class="logo-nav-bar">
+            <a href="https://www.epam-group.ru/" name="logo">
+                <img src="img\logo.png" width="200px" height="100px" title="Official website Epam">
+            </a>
+        </div>
+
+        <div class="middle-nav-bar">
+            <h1 style="text-align: center;">Epam times</h1>
+        </div>
+
+        <div class="menu-nav-bar">
+            <img src="img\menu.png" width="50px" height="50px" style="margin-left: 25px; margin-top: 25px;">
+        </div>
+        
+    </div>
+
+    <div class="main-bar">
+        <div class="menu">
+            <table style="margin-left: 20px;">
+                <tr >
+                    <div style="height: 50px; background-color: aqua; margin-top: 0px;">
+                        <h2 style="text-align: center;"><b>Link list 1</b></h2>
+                    </div>
+                </tr>
+                <tr><td bgcolor="#ffffff"><a href="url">Lorem</a></td></tr>
+                <tr><td bgcolor="#ffffff"><a href="url">Ipsum</a></td></tr>
+                <tr><td bgcolor="#ffffff"><a href="url">Dolor</a></td></tr>
+                <tr><td bgcolor="#ffffff"><a href="url">Sit</a></td></tr>
+                <tr><td bgcolor="#ffffff"><a href="url" rel="nofollow">Amet</a></td></tr>
+                <tr><td bgcolor="#ffffff"><a href="url" rel="nofollow">Consectetur</a></td></tr>
+
+                
+            </table>
+
+            <table style="margin-left: 20px;">
+                <tr >
+                    <div style="height: 50px; background-color: aqua; margin-top: 0px;">
+                        <h2 style="text-align: center;"><b>Link list 2</b></h2>
+                    </div>
+                </tr>
+                <tr><td bgcolor="#ffffff"><a href="url">Elit</a></td></tr>
+                <tr><td bgcolor="#ffffff"><a href="#logo">Nunc</a></td></tr>
+                
+            </table>
+        </div>
+
+        <div class="center-main-bar">
+            <div class="content-main-bar" style="outline: 1px solid #000; ">
+                <div style="outline: 1px solid #000; " >
+                    <img src="img\no_image.png" width="150px" height="150px" class="no-image">
+                    <a href="https://www.epam-group.ru/"><h2 style="text-align: center;">Lorem ipsum</h2></a>
+                    <i>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    </i>
+                </div>
+                <div style="outline: 1px solid #000; " >
+                    <img src="img\no_image.png" width="150px" height="150px" class="no-image">
+                    <a href="https://www.epam-group.ru/"><h2 style="text-align: center;">Lorem ipsum</h2></a>
+                    <i>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    </i>
+                </div>
+            </div>
+            <div style="outline: 1px solid #000; ">
+                <table border="1" style="width: 100%;">
+                    <caption style="color: red;">Lorem ipsum dolor, sit amet consectetur adipisicing elit</caption>
+                    <tr>
+                     <th>Lorem</th>
+                     <th>ipsum</th>
+                     <th>dolor</th>
+                     <th>sit</th>
+                     <th>amet</th>
+                     <th>consectetur</th>
+                     <th>adipisicing</th>
+                    </tr>
+                    <tr><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td></tr>
+                    <tr><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td></tr>
+                    <tr><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td></tr>
+                    <tr><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td><td>#######</td></tr>
+                   </table>
+             </div>
+        </div>
+        
+        <div class="right-main-bar">
+            <div class="user-form">
+                <form style="margin-left: 10px; margin-top: 10px;">  
+                    <br>
+                    <label>Login : </label>   
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Enter Username" name="username" required>  
+                    <br>
+                    <br>
+                    <label>Password : </label>   
+                    <br>
+                    <br>
+                    <input type="password" placeholder="Enter Password" name="password" required> 
+                    <br> 
+                    <br>
+                    <input type="checkbox"> Remember me
+                    <br>
+                    <br>
+                    <button type="submit"><img src="img\button.png" width="150px" height="50px"></button>   
+                </form>  
+            </div>
+            <div style="outline: 1px solid #000; ">
+                <img src="img\no_image.png" width="150px" height="150px" class="no-image">
+                    <a href="https://www.epam-group.ru/"><h2 style="text-align: center;">Lorem ipsum</h2></a>
+                    <i>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aut quos quisquam sunt? Repellat doloremque soluta recusandae, harum veritatis quisquam consectetur, dicta accusamus maxime quaerat, reiciendis dignissimos cum tenetur autem.
+                    </i>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+</body>
+</html>
