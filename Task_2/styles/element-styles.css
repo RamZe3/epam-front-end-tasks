@@ -1,0 +1,181 @@
+li {
+    list-style-type: none;
+   }
+
+ul{
+    padding-left: 0px;
+}
+
+.text-black{
+    color: black;
+}
+
+.text-white{
+    color: white;
+}
+
+.text-green{
+    color: #98a458;
+}
+
+.text-orange{
+    color: #e1983a;
+}
+
+.text-big{
+    font-size:40px
+}
+
+.text-default{
+    font-size:25px
+}
+
+.text-small{
+    font-size:15px
+}
+
+.text-grey{
+    color: grey;
+}
+
+.text-red{
+    color: red;
+}
+
+.text-login-form{
+    margin-left: 10px;
+}
+
+.img-left{
+    float: left;
+    height: 150px;
+}
+
+.text-read-more{
+    color: #e1983a;
+    font-size:15px;
+    font-weight: bold;
+}
+
+.text-login{
+    color: grey;
+    font-size:15px;
+
+}
+
+.text-b{
+    font-weight: bold;
+}
+
+.footer-text{
+    font-weight: bold;
+    color: #e1983a;
+    font-size:15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.footer-text-copyright{
+    font-size:15px;
+    margin-left: 100px;
+}
+
+.header-text{
+    margin-left: 450px;
+    margin-top: 60px;
+}
+
+.header-text-content{
+    margin-left: 0px;
+    margin-right: 0px;
+    float: left;
+}
+
+.header-text-content:visited{
+    width: 76px;
+    height: 39px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    background-image: url(../img/home_hover.jpg);
+}
+
+.a-header{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    min-width: 76px;
+    height: 35px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-top: 20px;
+    float: left;
+}
+
+.a-header:active{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    min-width: 76px;
+    height: 35px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-top: 20px;
+    float: left;
+    background-image: url(../img/home_hover.jpg);
+    background-size: 100% 100%;
+}
+
+.a-header:hover{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    min-width: 76px;
+    height: 35px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-top: 20px;
+    float: left;
+    background-image: url(../img/home_hover.jpg);
+    background-size: 100% 100%;
+}
+
+.a-footer{
+    text-decoration: none;
+    color: #e1983a;
+}
+
+.a-footer:hover{
+    text-decoration: none;
+    color: #98a458;
+}
+
+.a-login{
+    text-decoration: none;
+    color: grey;
+}
+
+.a-login:hover{
+    text-decoration: none;
+    color: #e1983a;
+}
+
+.text-header-a{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.header-text-bottom{
+    padding-top: 225px;
+    padding-left: 700px;
+    margin-right: 160px;
+}
+
+.header-button{
+    background-color: white;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    border: 0px;
+    margin-top: 25px;
+}

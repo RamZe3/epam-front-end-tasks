@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/elements.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> <!-- JQUERY -->
+    <title>Task_3</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="menu" id="menu">
+                <button class="menu-button" name="menu"><i class="fa fa-bars fa-3x color-red" aria-hidden="true"></i></button>
+            </div>
+            <div class="logo"></div>
+            <div class="menu-tab">
+                <div class="menu-element">
+                    <div>EXPERT SEARCH</div>
+                </div>
+                <div class="menu-element">
+                    <div>SAVED EXPERTS</div>
+                </div>
+                <div class="menu-active menu-element">
+                    <div>PROJECTS <i class="fa fa-flag" aria-hidden="true"></i></div>
+                </div>
+                <div class="menu-element">
+                    <div>CONSULTATIONS <i class="fa fa-phone color-red" aria-hidden="true"></i></div>
+                </div>
+                <div class="menu-element">
+                    <div>EVENTS</div>
+                </div>
+                <div class="menu-element">
+                    <div><i class="fa fa-sign-out color-red" aria-hidden="true"></i> LOGOUT</div>
+                </div>
+                <div class="menu-user">
+                    <div class="t-small-s"><i class="fa fa-user fa-2x" aria-hidden="true"></i> LOGGED IN AS</div>
+                    <div class="t-small margin-left">Ramil Fitkulin</div>
+                </div>
+            </div>
+
+            <div class="show" style="display: none;">
+                <div class="menu-element">
+                    <div>EXPERT SEARCH</div>
+                </div>
+                <div class="menu-element">
+                    <div>SAVED EXPERTS</div>
+                </div>
+                <div class="menu-active menu-element">
+                    <div>PROJECTS <i class="fa fa-flag" aria-hidden="true"></i></div>
+                </div>
+                <div class="menu-element">
+                    <div>CONSULTATIONS <i class="fa fa-phone color-red" aria-hidden="true"></i></div>
+                </div>
+                <div class="menu-element">
+                    <div>EVENTS</div>
+                </div>
+                <div class="menu-element">
+                    <div><i class="fa fa-sign-out color-red" aria-hidden="true"></i> LOGOUT</div>
+                </div>
+                <div class="menu-user">
+                    <div class="t-small-s"><i class="fa fa-user fa-2x" aria-hidden="true"></i> LOGGED IN AS</div>
+                    <div class="t-small margin-left">Ramil Fitkulin</div>
+                </div>
+            </div>
+        </div>
+        <div class="content-box">
+        <div class="content">
+            <div class="nav-bar">
+                <div class="nav-back"><span class="t-default color-grey"><i class="fa fa-chevron-left" aria-hidden="true"></i> Projects list</span></div>
+                <div class="nav-proj t-big">Test Project last <button class="plus-button-add" id="plus"><i class="fa fa-plus-circle fa-2x color-grey" aria-hidden="true"></i></button></div>
+                <span class="proj-des" style="display: none;">
+                    <div class="proj-des-elem-main" style="height: 140px;">
+                    <div class="proj-des-elem" style="height: 25px;"><span class="left-text text-b">Create date</span>  <span class="right color-grey">01/02/15 </span></div>
+                    <div class="proj-des-elem" style="height: 50px;"><span class="left-text text-b">Target industries</span><span class="right-big-text color-grey">Wireline Telephone Equipment </span></div>
+                    <div class="proj-des-elem" style="height: 25px;"><span class="text-b">Bios sent</span><span class="right color-grey">10 </span></div>
+                    <div class="proj-des-elem" style="height: 25px;"><span class="left-text text-b">Calls scheduled</span><span class="right color-grey">2 </span></div>
+                    </div>
+                    <div class="proj-des-elem-main" style="height: 140px;">
+                    <div class="proj-des-elem" style="height: 25px;"><span class="text-b">Requested consultations</span><span class="right color-grey">10 </span></div>
+                    <div class="proj-des-elem" style="height: 50px;"><span class="left-text text-b">Target companies</span><span class="right-big-text-1 color-grey">Frontier Communications Corporation [FTR] </span></div>
+                    <div class="proj-des-elem" style="height: 25px;"><span class="left-text text-b">Calls completed</span><span class="right color-grey">2 </span></div>
+                    <div class="proj-des-elem" style="height: 25px;"><span class="left-text text-b">Calls in scheduling</span><span class="right color-grey">1 </span></div>
+                    </div>
+                </span>
+                <div class="nav-tabs">
+                    <div class="nav-tab-left t-default-1">
+                        <div class="nav-text">EXPERTS <i class="fa fa-flag color-red" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="nav-tab-right t-default-1">
+                        <div class="nav-text">CONSULTATIONS <i class="fa fa-phone color-red" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <div class="nav-expand nav-box-1 t-default-1"><div class="nav-text">EXPAND ALL</div></div>
+                <div class="nav-export nav-box-1 t-default-1"><div class="nav-text"> <img class="exel" src="img/fexel-removebg-preview.png">EXPORT</div></div>
+                <div class="nav-filters nav-box-1 t-default-1"><div class="nav-text"><i class="fa fa-filter" aria-hidden="true"> </i> FILTERS</i></div></div>
+                <div class="nav-sort">
+                    <select>
+                        <option>Sort by status</option>
+                    </select>
+                </div>
+                <span class="botton-line"></span>
+                <span class="left-line"></span>
+                <span class="right-line"></span>
+                <span class="tel-buf"></span>
+                <span class="left-line-tel"></span>
+                <span class="right-line-tel"></span>
+            </div>
+            <div class="main-bar">
+                <div class="employee">
+                    <div class="employee-text">
+                        <div><span class="t-red">INDUSTRY EXPERT</span><div class="box-red"><span class="box-text">NEW</span></div><span class="left-data t-small color-grey">07/13/14</span></div>
+                        <div><span class="t-default text-b">Mikhail Semichev</span></div>
+                        <div><span class="text-b">EPAM</span></div>
+                        <div><span>FE developer</span> <span class="color-grey">(12/01/11 - Present)</span></div>
+                        <div><span class="t-red">Lorem ipsum: dolor Inventore optio repellendus architecto non assumenda minima numquam deleniti laborum voluptates quis.</span></div>
+                        <div><span class="t-red">Lorem ipsum: dolor Inventore optio repellendus architecto non assumenda minima numquam deleniti laborum voluptates quis.</span></div>
+                        <hr>
+                        <div><span class="text-line t-red">Confirmed Availability</span></div>
+                        <div><span class="t-red text-mar-left">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></div>
+                        <div><span class="t-red text-mar-left">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></div>
+                    </div>
+                    <div class="employee-under">
+                        <div class="under-block"><div><i class="fa fa-phone" aria-hidden="true"></i> SCHEDULE</div></div>
+                        <div class="under-block"><div><i class="fa fa-info-circle" aria-hidden="true"></i> REQUEST INFO</div></div>
+                        <div class="under-block"><div><i class="fa fa-times" aria-hidden="true"></i> DECLINE</div></div>
+                    </div>
+                </div>
+                <div class="employee">
+                    <div class="employee-text">
+                        <div><span class="t-red">INDUSTRY EXPERT</span> <div class="box-grey"><span class="box-text"><span>VIEWED</span></span></div><span class="left-data t-small color-grey">07/13/14</span></div>
+                        <div><span class="t-default text-b">Mikhail Semichev</span></div>
+                        <div><span class="text-b">EPAM<span class="box-red-border"><span class="box-text">Public</span></span></span></div>
+                        <div><span>FE developer</span></div>
+                    </div>
+                    <div class="employee-under">
+                        <div class="under-block"><div><i class="fa fa-phone" aria-hidden="true"></i> SCHEDULE</div></div>
+                        <div class="under-block"><div><i class="fa fa-info-circle" aria-hidden="true"></i> REQUEST INFO</div></div>
+                        <div class="under-block"><div><i class="fa fa-times" aria-hidden="true"></i> DECLINE</div></div>
+                    </div>
+                </div>
+                <div class="employee">
+                    <div class="employee-text">
+                        <div><span class="t-red">INDUSTRY EXPERT</span> <div class="box-grey"><span class="box-text"><span>VIEWED</span></span></div><span class="left-data t-small color-grey">07/13/14</span></div>
+                        <div><span class="t-default text-b">Mikhail Semichev</span></div>
+                        <div><span class="text-b">EPAM<span class="box-red-border"><span class="box-text">Public</span></span></span></div>
+                        <div><span>FE developer</span></div>
+                    </div>
+                    <div class="employee-under">
+                        <div class="under-block"><div><i class="fa fa-phone" aria-hidden="true"></i> SCHEDULE</div></div>
+                        <div class="under-block"><div><i class="fa fa-info-circle" aria-hidden="true"></i> REQUEST INFO</div></div>
+                        <div class="under-block"><div><i class="fa fa-times" aria-hidden="true"></i> DECLINE</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function() {
+    $("#menu").click(function() {
+    $(".show").toggle("slow" );
+    });
+    })
+
+    $(document).ready(function() {
+    $(".plus-button-add").click(function() {
+    $(".proj-des").slideToggle("slow" );
+    if ( $(".fa").hasClass("fa-minus-circle") ) {
+    $(".fa-minus-circle").removeClass("fa-minus-circle").addClass("fa-plus-circle");
+    }
+    else{
+        $(".fa-plus-circle").removeClass("fa-plus-circle").addClass("fa-minus-circle");
+    }
+    });
+    })
+</script>
+</html>

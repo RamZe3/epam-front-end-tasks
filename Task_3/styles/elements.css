@@ -1,0 +1,161 @@
+.t-big{
+    font-size:35px
+}
+
+.t-default{
+    font-size:24px
+}
+
+.t-default-1{
+    font-size:20px
+}
+
+.t-small{
+    font-size:15px
+}
+
+.t-small-s{
+    font-size:12px
+}
+
+.text-b{
+    font-weight: bold;
+}
+
+.text-line{
+    text-decoration: underline
+}
+
+.t-red{
+    color: #b2062a;
+}
+
+.box-red{
+    float: right;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #b2062a;
+    color: white;
+}
+
+.box-grey{
+    float: right;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: grey;
+    color: white;
+}
+
+.box-red-border{
+    width: 50px;
+    height: 20px;
+    margin-left: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: white;
+    color: #b2062a;
+    border: 1px solid #b2062a;
+}
+
+.botton-line{
+    border-bottom: 1px solid grey;
+    width: 100%;
+    order: 50;
+}
+
+.left-line{
+    width: 1px;
+    height: 90px;
+    border-left: 1px solid grey;
+}
+
+.left-line-tel{
+    width: 1px;
+    height: 60px;
+    border-left: 1px solid grey;
+}
+
+.right-line{
+    width: 1px;
+    height: 90px;
+    border-right: 1px solid grey;
+}
+
+.right-line-tel{
+    width: 1px;
+    height: 60px;
+    border-right: 1px solid grey;
+}
+
+.t-company{
+    float: left;
+}
+
+.plus-button-add{
+    border: 0px;
+}
+
+.menu-button{
+    border: 0px;
+    background-color: white;
+}
+
+.right{
+    float: right;
+    margin-top: 5px;
+}
+
+.box-text{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+
+.color-red{
+    color: #b2062a;
+}
+
+.text-mar-left{
+    margin-left: 15px;
+}
+
+.exel{
+    width: 35px;
+    height: 19px;
+}
+
+.color-grey{
+    color: grey;
+}
+
+.margin-left{
+    margin-left: 20px;
+}
+
+.left-data{
+    float: right;
+    margin-right: 15px;
+    margin-top: 2px;
+}
+
+.right-big-text{
+    float: right;
+    height: 45px; width: 150px;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.right-big-text-1{
+    float: right;
+    height: 45px; width: 200px;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.left-text{
+    margin-top: 5px;
+}
