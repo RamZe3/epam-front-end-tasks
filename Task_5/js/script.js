@@ -1,5 +1,5 @@
 // Создаем объект изображения
-//var img = new Image();
+var img = new Image();
 
 // Привязываем функцию к событию onload
 // Это указывает браузеру, что делать, когда изображение загружено
@@ -8,7 +8,6 @@
 //};
 
 // Загружаем файл изображения
-//img.src = "face.jpg";
 
 var gameLogic = new GameLogic(100, 20, 10, 5)
 var mass = new Array(10);
@@ -31,6 +30,10 @@ function draw() {
     if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
     }
+    img.src = "../TASK_5/images/hero1r.png";
+    img.onload = function() {
+      ctx.drawImage(img, hero.x*80, hero.y*80, 80, 80);
+    };
     drawGround(ctx, mass)
 
     document.addEventListener('keydown', function(event){
@@ -86,8 +89,9 @@ function drawGround(ctx, mass){
       if(obj != null){
         switch (obj.type){
           case Type.HERO:
-            ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
-            ctx.fillRect(width*i, height*j, 80, 80)
+            ctx.drawImage(img, width*i, height*j, 80, 80);
+            //ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
+            //ctx.fillRect(width*i, height*j, 80, 80)
             break
           case Type.ENEMY:
             ctx.fillStyle = 'rgb(0, 0, 0)';
