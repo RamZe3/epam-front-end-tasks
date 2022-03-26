@@ -2,29 +2,26 @@ import React, {useState} from 'react';
 import NoteButton from '../UI/Buttons/NoteButton';
 import NoteInput from '../UI/Inputs/NoteInput';
 
-const NoteSearch = ({create}) => {
-    const [note, setNote] = useState({title:"", content:""})
+const NoteSearch = ({searchQuery, setSearchQuery}) => {
 
+    const [query, setQuery] = useState("")
 
-    const addNewNote = (e) => {
+    const search = (e) => {
         e.preventDefault()
-        const newNote = {
-            id: Date.now(), ...note
-        }
-        create(newNote)
-        setNote({title:"", content:""})
+        setSearchQuery({...searchQuery, query: query})
     }
 
     return (
         <form>
             {/*Управляемый компонент*/}
             <NoteInput
-                value={note.title}
-                //onChange={e => setNote({...note, title: e.target.value})}
+                value={query}
+                //onChange={e => setSearchQuery({...searchQuery, query: e.target.value})}
+                onChange={e => setQuery(e.target.value)}
                 type="text"
                 placeholder="Title of note"
             />
-            <NoteButton onClick={addNewNote}>Create note</NoteButton>
+            <NoteButton onClick={search}>Search</NoteButton>
         </form>
     );
 };
