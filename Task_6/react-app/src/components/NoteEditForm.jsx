@@ -2,17 +2,17 @@ import React, {useState} from 'react';
 import NoteButton from '../UI/Buttons/NoteButton';
 import NoteInput from '../UI/Inputs/NoteInput';
 
-const NoteForm = ({create, setVisible}) => {
-    const [note, setNote] = useState({title:"", content:""})
+const NoteEditForm = ({editNewNote, editNote, setVisible}) => {
+    const [note, setNote] = useState({title:editNote.title, content:editNote.content})
 
 
-    const addNewNote = (e) => {
+    const EditNewNote = (e) => {
         e.preventDefault()
         const newNote = {
             id: Date.now(), ...note
         }
-        create(newNote)
-        setNote({title:"", content:""})
+        editNewNote(newNote)
+        setNote({title:editNote.title, content:editNote.content})
         //setVisible(false);
     }
 
@@ -32,9 +32,9 @@ const NoteForm = ({create, setVisible}) => {
                 type="text"
                 placeholder="Content of note"
             />
-            <NoteButton onClick={addNewNote}>Create note</NoteButton>
+            <NoteButton onClick={editNewNote}>Create note</NoteButton>
         </form>
     );
 };
 
-export default NoteForm;
+export default NoteEditForm;

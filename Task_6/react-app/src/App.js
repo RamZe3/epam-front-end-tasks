@@ -6,12 +6,17 @@ import NoteForm from "./components/NoteForm";
 import NoteButton from "./UI/Buttons/NoteButton";
 import NoteSearch from "./components/NoteSearch";
 import NoteService from "./API/NotesService";
+import AddNoteModal from "./UI/Modals/AddNoteModal";
+
+import "./styles/App.css"
 
 //var notes = [{ id:123, title:"1234", content:"123"}, { id:123, title:"1234", content:"123"}]
 
 function App() {
-  const [notes, setNotes] = useState([{ id:111, title:"Req", content:"asd"}, { id:222, title:"zxc", content:"rty"}, { id:1112, title:"Req", content:"asd"}, { id:2223, title:"zxc", content:"rty"}])
+  //const [notes, setNotes] = useState([{ id:111, title:"Req", content:"asd"}, { id:222, title:"zxc", content:"rty"}, { id:1112, title:"Req", content:"asd"}, { id:2223, title:"zxc", content:"rty"}])
+  const [notes, setNotes] = useState(NoteService.getAll())
   const [searchQuery, setSearchQuery] = useState({query: ""})
+  const [modal, setModal] = useState(false);
 
   //let [notes, setNotes] = useState([])
 
@@ -19,8 +24,8 @@ function App() {
     if(searchQuery.query === ""){
       return notes
     }
-    return notes.filter(n => !(n.title.toLocaleLowerCase().localeCompare(searchQuery.query.toLocaleLowerCase()))
-    || !(n.content.toLocaleLowerCase().localeCompare(searchQuery.query.toLocaleLowerCase())))
+    return notes.filter(n => (n.title.toLocaleLowerCase().includes(searchQuery.query.toLocaleLowerCase()))
+    || (n.content.toLocaleLowerCase().includes(searchQuery.query.toLocaleLowerCase())))
   }, [searchQuery, notes])
 
   const createNote = (newNote) => {
@@ -34,10 +39,11 @@ function App() {
 
   
   return (
-    //console.log(NoteService.getAll()),
+    console.log( NoteService.getAll()),
     <div className="App">
+      <NoteButton onClick={() => setModal(true)}>Create note</NoteButton>
+      <AddNoteModal visible={modal} setVisible={setModal}><NoteForm create={createNote} setVisible={setModal}/></AddNoteModal>
       <NoteSearch searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
-      <NoteForm create={createNote}/>
       <NoteList notes = {filterNotes} remove = {removeNotes}/>   
     </div>
   );
