@@ -16,7 +16,7 @@ class NoteList extends Component{
     render(){
         return <div className="List">
             {this.props.notes.map(note => 
-                <NoteModal note = {note} key = {note.id} remove = {this.props.remove} />
+                <NoteModal note = {note} key = {note.id} remove = {this.props.remove} edit={this.props.edit} />
                 )}
         </div>
     }

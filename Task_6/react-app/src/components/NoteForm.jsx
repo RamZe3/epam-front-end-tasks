@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import NoteButton from '../UI/Buttons/NoteButton';
 import NoteInput from '../UI/Inputs/NoteInput';
+import TextAreaInput from '../UI/Inputs/TextAreaInput';
 
 const NoteForm = ({create, setVisible}) => {
     const [note, setNote] = useState({title:"", content:""})
@@ -26,13 +27,14 @@ const NoteForm = ({create, setVisible}) => {
                 placeholder="Title of note"
             />
             {/*Неуправляемый\Неконтролируемый компонент*/}
-            <NoteInput
+            <TextAreaInput
                 value={note.content}
                 onChange={e => setNote({...note, content: e.target.value})}
                 type="text"
                 placeholder="Content of note"
             />
-            <NoteButton onClick={addNewNote}>Create note</NoteButton>
+            <br/>
+            <NoteButton onClick={addNewNote} className={'btn-create-note'}>Create note</NoteButton>
         </form>
     );
 };
