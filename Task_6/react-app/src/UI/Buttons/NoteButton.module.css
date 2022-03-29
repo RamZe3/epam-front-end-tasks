@@ -6,3 +6,18 @@
     border: 1px solid teal;
     cursor: pointer;
 }
+
+.noteBtn{
+    border: 0px;
+    width: 100%;
+    padding: 0px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.noteSearch{
+    position: absolute;
+    float: right;
+    padding-bottom: 0px;
+}

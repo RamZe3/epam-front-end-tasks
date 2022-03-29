@@ -29,22 +29,32 @@ function App() {
   }, [searchQuery, notes])
 
   const createNote = (newNote) => {
-    setNotes([...notes, newNote])
+    NoteService.addNote(newNote)
+    setNotes([newNote, ...notes])
   }
 
   const removeNotes = (note) => {
+    NoteService.removeById(note.id)
     setNotes(notes.filter(n => n.id !== note.id))
     //setNotes([...notes, note])
   }
 
+  const editNote = (note) => {
+    NoteService.editNote(note)
+    alert("aaaaa")
+    setNotes(NoteService.getAll())
+    //setNotes([...notes, note])
+  }
   
   return (
     console.log( NoteService.getAll()),
     <div className="App">
-      <NoteButton onClick={() => setModal(true)}>Create note</NoteButton>
+      <NoteButton onClick={() => setModal(true)} className={"noteCreate"}>+</NoteButton>
       <AddNoteModal visible={modal} setVisible={setModal}><NoteForm create={createNote} setVisible={setModal}/></AddNoteModal>
+      <hr/>
       <NoteSearch searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
-      <NoteList notes = {filterNotes} remove = {removeNotes}/>   
+      <hr/>
+      <NoteList notes = {filterNotes} remove = {removeNotes} edit={editNote}/>   
     </div>
   );
 }

@@ -25,12 +25,14 @@ class NoteModal extends Component{
     render(){
         return <div className="note">
             <NoteButton onClick={() => this.setModal(true)}>
-            <div> Note {this.state.note.id} {this.state.note.title} {this.state.note.content}</div>
+            <div> 
+            <h2>{this.state.note.title}</h2>
+            <h4>{this.state.note.content}</h4>
+            </div>
             </NoteButton>
-            <NoteButton onClick={() => this.props.remove(this.state.note)}>
-                Удалить
+            <NoteButton className={"note-delete"} onClick={() => this.props.remove(this.state.note)}>🗑
             </NoteButton>
-            <AddNoteModal visible={this.state.modal} setVisible={this.setModal}><NoteEditForm editNote={this.state.note}></NoteEditForm></AddNoteModal>
+            <AddNoteModal visible={this.state.modal} setVisible={this.setModal}><NoteEditForm editNote={this.state.note} edit={this.props.edit}></NoteEditForm></AddNoteModal>
         </div>
         
     }

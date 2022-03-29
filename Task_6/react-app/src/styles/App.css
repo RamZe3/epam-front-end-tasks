@@ -16,8 +16,10 @@
 
 .note {
     display: flex;
-    padding: 15px;
-    border: 2px solid teal;
+    flex-direction: column;
+    padding: 5px;
+    border: 2px solid gray;
+    border-radius: 10px;
     margin-top: 15px;
     justify-content: space-between;
     align-items: center;
@@ -69,4 +71,38 @@
 
 .navbar__links {
     margin-left: auto;
+}
+
+.noteCreate{
+    position: fixed;
+    left: 90%;
+    bottom: 5%;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 50px;
+    text-align: center;
+    padding-left: 0px;
+    font-size: 50px;
+}
+
+.note-delete{
+    text-align: right;
+    font-size: 30px;
+    width: 35px;
+    margin-left: auto;
+}
+
+.form-outline{
+    width: 727px;
+}
+
+.btn-create-note{
+    margin-top: 10px;
+    width: 100px;
+}
+
+.btn-create-note:hover{
+    background-color: gray;
+    border-radius: 20px;
 }
