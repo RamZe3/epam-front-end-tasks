@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
+import { useDispatch } from 'react-redux';
 import BaseButton from '../UI/Buttons/BaseButton';
 import BaseInput from '../UI/Inputs/BaseInput';
 
 const TaskAdd = ({addTask}) => {
 
+    const dispatch = useDispatch()
     const [title, seTitle] = useState("")
 
     const add = (e) => {
@@ -12,7 +14,7 @@ const TaskAdd = ({addTask}) => {
         const newTask = {
             id: Date.now(), title: title, done:false
         }
-        addTask(newTask)
+        dispatch({type: "ADD_TASK", payload: newTask})
         seTitle("")
     }
 

@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Category from './components/Category';
 import CategoryAdd from './components/CategoryAdd';
 import CategoryList from './components/CategoryList';
@@ -13,17 +14,24 @@ import AddCategory from './UI/Modals/AddCategory';
 
 
 function App() {
+  const dispatch = useDispatch()
+  const categories = useSelector(state => state.categories.categories)
+  const tasks = useSelector(state => state.tasks.tasks)
+  //console.log("asd" + cash)
+  //dispatch({type: "ADD", payload: 5})
+
   const [modal, setModal] = useState(false);
   //const [searchCQuery, setSearchCQuery] = useState({query: ""})
   const [searchTQuery, setSearchTQuery] = useState({query: ""})
   const [searchDoneQuery, setSearchDoneQuery] = useState({query: "true"})
+  const [progress, setProgress] = useState(0)
   const [activeTask, setActiveTask] = useState()
 
-  const [tasks, setTasks] = useState([])
-  const [categories, setCategories] = useState([{id: 1231, title: "Qew", categories: [
-    {id: 12311, title: "Qew"}, {id: 12312, title: "Qew"}]}
-  , {id: 12412, title: "withTasks", tasks: [{id: 123, title: "asd", done:true}]}
-])
+  //const [tasks, setTasks] = useState([])
+  //const [categories, setCategories] = useState([{id: 1231, title: "Qew", categories: [
+  //  {id: 12311, title: "Qew"}, {id: 12312, title: "Qew"}]}
+ // , {id: 12412, title: "withTasks", tasks: [{id: 123, title: "asd", done:true}]}
+//])
 
   //Category
   const removeCategory = (id, category) => {
@@ -31,11 +39,13 @@ function App() {
     if(category !== null){
       console.log("child")
     }
-    setCategories(categories.filter(c => c.id !== id))
+    //setCategories(categories.filter(c => c.id !== id))
+    dispatch({type: "REMOVE_CATEGORY", payload: id})
   }
 
   const createCategory = (category) => {
-    setCategories([category, ...categories])
+    dispatch({type: "ADD_CATEGORY", payload: category})
+    //setCategories([category, ...categories])
   }
 
   const createChildCategory = (category, categories, setCategories) => {
@@ -55,8 +65,42 @@ function App() {
 
   //Tasks
   const setActiveTasks = (tasks) => {
-    setTasks(tasks)
+    dispatch({type: "SET_TASKS", payload: tasks})
+    if(tasks === undefined){
+      //setProgress(0)
+    }
+    let count = 0
+    let trueCount = 0
+    for (let index = 0; index < tasks.length; index++) {
+      const element = tasks[index];
+      count++;
+      if(element.done === true){
+        trueCount++;
+      }
+    }
+    //setProgress(trueCount/count*100)
   }
+
+  const asd = useMemo(() => {
+    if(tasks === undefined){
+      console.log("DA")
+      return 0
+    }
+    let count = 0
+    let trueCount = 0
+    for (let index = 0; index < tasks.length; index++) {
+      const element = tasks[index];
+      count++;
+      if(element.done === true){
+        trueCount++;
+      }
+    }
+    return trueCount/count*100
+  }, [tasks, progress])
+
+  const style = {
+    width: asd + "%",
+  };
 
   const createTask = (task) => {
     setActiveTasks([task, ...tasks])
@@ -87,7 +131,7 @@ function App() {
           <TaskSearchCheckbox searchCheckQuery={searchDoneQuery} setSearchCheckQuery={setSearchDoneQuery}/>
           <TaskSearch searchQuery={searchTQuery} setSearchQuery={setSearchTQuery}/>
         </div>
-        <div className='progress-bar'><br/></div>
+        <div className='progress-bar'><div className='br-main'><div className='br-main-in' style={style}></div></div></div>
         <div className='header-2'>
           <div className='add-category'>
             <div className='add-c-inp'>
@@ -104,7 +148,7 @@ function App() {
       <div className='main-content'>
         <div className='categories'>
           <CategoryList categories={categories} setActiveTasks={setActiveTasks} 
-          remove={removeCategory} setAddModal={setModal} setCategories={setCategories}/>
+          remove={removeCategory} setAddModal={setModal}/>
         </div>
         <div className='content'>
           <TaskList tasks={filterTasks}/>
